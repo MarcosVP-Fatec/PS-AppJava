@@ -13,7 +13,41 @@ public class Desafio4 {
 
 	public static void main(String[] args) {
 
+		StringBuilder saida = new StringBuilder();
+		StringBuilder saidaE = new StringBuilder();
+		StringBuilder saidaD = new StringBuilder();
+		
 		Scanner scan = new Scanner(System.in);
+		String texto = scan.nextLine();
+		final int N = Integer.valueOf(texto);
+		
+		int metade;
+		
+		for (int i = 0; i < N; i++) {
+			
+			texto = scan.nextLine();
+			metade = texto.length()/2;
+			
+			final String txt_esq = texto.substring(0,metade);
+			final String txt_dir = texto.substring(metade);
+			
+			for (int j = (metade-1); j >= 0; j--) {
+				
+				saidaE.append(txt_esq.substring(j,j+1));
+				saidaD.append(txt_dir.substring(j,j+1));
+				
+			}
+			
+			saida.append(saidaE.toString());
+			saida.append(saidaD.toString());
+			saida.append("\n");
+			saidaE =  new StringBuilder();
+			saidaD =  new StringBuilder();
+			
+		}
+		
+		scan.close();
+		System.out.println(saida.toString());
 		
 	}
 
