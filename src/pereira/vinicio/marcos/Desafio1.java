@@ -1,5 +1,8 @@
 package pereira.vinicio.marcos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
 @author Marcos Vinicio Pereira
 
@@ -12,7 +15,17 @@ Saída Apresente todos os valores lidos na entrada segundo a ordem apresentada a
 public class Desafio1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		List<Integer> valores = new ArrayList<Integer>();
+		List<Integer> saida = new ArrayList<Integer>();
+		
+		System.out.println("Iniciado");
+		
+		while (true) {
+			System.out.println("teste");
+			break;
+		}
+		
 
 	}
 
