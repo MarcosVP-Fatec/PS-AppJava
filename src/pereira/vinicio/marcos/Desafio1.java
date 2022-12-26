@@ -1,7 +1,9 @@
 package pereira.vinicio.marcos;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 /**
 @author Marcos Vinicio Pereira
@@ -16,17 +18,48 @@ public class Desafio1 {
 
 	public static void main(String[] args) {
 		
-		List<Integer> valores = new ArrayList<Integer>();
-		List<Integer> saida = new ArrayList<Integer>();
-		
-		System.out.println("Iniciado");
-		
+		List<Integer> pares = new ArrayList<Integer>();
+		List<Integer> impar = new ArrayList<Integer>();
+		StringBuilder saida = new StringBuilder();
+
+		Scanner scan;
+
 		while (true) {
-			System.out.println("teste");
-			break;
+			
+			scan = new Scanner(System.in);
+			final String digitado = scan.nextLine();
+			if (digitado.equals("")) {
+				break;
+			}
+			
+			int numero = Integer.parseInt(digitado);
+			
+			if (numero % 2 == 0){
+				pares.add(numero);
+			} else {
+				impar.add(numero);
+			}
+			
 		}
 		
+		scan.close();
+
+		Collections.sort(pares);
+		Collections.sort(impar,Collections.reverseOrder());
+		
+		for (int i: pares) {
+			saida.append(i);
+			saida.append("\n");
+		}
+		
+		for (int i: impar) {
+			saida.append(i);
+			saida.append("\n");
+		}
+
+		System.out.println(saida.toString());
 
 	}
 
 }
+
