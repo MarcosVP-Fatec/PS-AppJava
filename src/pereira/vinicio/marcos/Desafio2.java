@@ -44,7 +44,7 @@ public class Desafio2 {
 		float valor = Float.parseFloat(digitado);
 		scan.close();
 		boolean quebraMoeda = false;
-	    final DecimalFormat MOEDA = new DecimalFormat("###,###,##0.00",new DecimalFormatSymbols(new Locale("pt","BR")));
+	    final DecimalFormat MOEDA = new DecimalFormat("###,###,##0.00",new DecimalFormatSymbols(Locale.US));
 	
 		while (valor > 0.0F) {
 			

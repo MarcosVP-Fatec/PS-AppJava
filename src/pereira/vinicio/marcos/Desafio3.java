@@ -1,4 +1,7 @@
 package pereira.vinicio.marcos;
+
+import java.util.Scanner;
+
 /**
 @author Marcos Vinicio Pereira
 TERCEIRO DESAFIO
@@ -25,7 +28,37 @@ STDIN Function
 public class Desafio3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		String[] vtexto = scan.nextLine().split(" ");
+		
+		int n = Integer.valueOf(vtexto[0]);
+		int k = Integer.valueOf(vtexto[1]);
+		
+		vtexto = scan.nextLine().split(" ");
+		scan.close();
+		
+		int[] arr = new int[n];
+		
+		for (int i = 0; i < n; i++) {
+			arr[i] = Integer.parseInt(vtexto[i]);
+		}
+		
+		int resposta = 0;
+		
+		for (int i = 0; i < arr.length-1; i++) {
+			
+			for (int j = (i+1); j < arr.length; j++) {
+			
+				if (Math.abs(arr[i]-arr[j]) == k) {
+					resposta++;
+				}
+				
+			}
+			
+		}
+		
+		System.out.println(resposta);
 
 	}
 

@@ -1,4 +1,7 @@
 package pereira.vinicio.marcos;
+
+import java.util.Scanner;
+
 /**
 @author Marcos Vinicio Pereira
 QUARTO DESAFIO
@@ -9,8 +12,9 @@ Saída Para cada linha de entrada deverá ser impressa uma linha de saída com a
 public class Desafio4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		Scanner scan = new Scanner(System.in);
+		
 	}
 
 }
